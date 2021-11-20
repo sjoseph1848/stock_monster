@@ -1,0 +1,5 @@
+### GET Test to see if server is up
+GET http://localhost:5000
+
+### GET Apes 
+GET http://localhost:5000/api/v1/apes
