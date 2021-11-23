@@ -13,6 +13,12 @@ let avgRHI = async (rhi) => {
     rhi.map((item) => {
         rhiArr.push(item.relativeIndex);
     })
+
+    let totalSum = 0;
+    rhiArr.map((item) => {
+        totalSum += item;
+    });
+    let rhiAverage = totalSum / rhiArr.length;
     let mostRecent = rhiArr[0];
     let earliest = rhiArr[rhiArr.length - 1];
     let diff = mostRecent - earliest;
@@ -23,7 +29,7 @@ let avgRHI = async (rhi) => {
         chatDirection = 'positive';
     }
     let rhiObj = {
-        avg: rhiArr,
+        avg: rhiAverage,
         newest: mostRecent,
         oldest: earliest,
         diff,
@@ -31,4 +37,6 @@ let avgRHI = async (rhi) => {
     }
     return rhiObj;
 }
+
+
 

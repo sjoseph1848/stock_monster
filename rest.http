@@ -6,4 +6,4 @@ GET http://localhost:5000/api/v1/apes
 
 
 ### GET Financialprep Sentiment 
-GET http://localhost:5000/api/v1/fpsentiment/PS
+GET http://localhost:5000/api/v1/fpsentiment/TSLA
