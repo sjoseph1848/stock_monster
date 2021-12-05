@@ -2,7 +2,7 @@ const axios = require('axios');
 const Ape = require('../models/Apes');
 exports.getApes = async (req, res, next) => {
   try {
-    const apes = await Apes.find();
+    const apes = await Ape.find();
     res.status(200).json({ success: true, count: apes.length, data: apes });
   } catch (error) {
     res.status(400).json({ success: false });
