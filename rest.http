@@ -4,6 +4,11 @@ GET http://localhost:5000
 ### GET Apes 
 GET http://localhost:5000/api/v1/apes
 
+### GET APE
+GET http://localhost:5000/api/v1/apes/NKLA
 
+### Create Apes 
+POST http://localhost:5000/api/v1/apes/3
 ### GET Financialprep Sentiment 
-GET http://localhost:5000/api/v1/fpsentiment/TSLA
+GET http://localhost:5000/api/v1/fpsentiment/F
+

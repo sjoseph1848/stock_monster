@@ -1,12 +1,14 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
-
+const colors = require('colors');
+// bring in mongodb 
+const connectDB = require('./config/db');
 const apes = require('./routes/apes');
 const financialprepSentiment = require('./routes/sentiment/financialprepSentiment');
 // Load env vars
 dotenv.config({ path: './config/config.env' });
-
+connectDB();
 const app = express();
 
 // Dev logging middleware 
