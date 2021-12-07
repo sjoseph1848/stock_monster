@@ -9,6 +9,7 @@ const PortfolioSchema = new mongoose.Schema({
   },
   price: Number,
   volumeAvg: Number,
+  marketCap: Number,
   createdAt: {
     type: Date,
     default: Date.now,
@@ -22,6 +23,8 @@ PortfolioSchema.pre('save', async function (next) {
   this.name = data[0].companyName;
   this.price = data[0].price;
   this.volumeAvg = data[0].volAvg;
+  this.marketCap = data[0].mktCap;
+  next();
 });
 
 module.exports = mongoose.model('Portfolio', PortfolioSchema);

@@ -7,6 +7,8 @@ const connectDB = require('./config/db');
 const apes = require('./routes/apes');
 const financialprepSentiment = require('./routes/sentiment/financialprepSentiment');
 const portfolio = require('./routes/fundamental/portfolio');
+const income = require('./routes/fundamental/income');
+
 // Load env vars
 dotenv.config({ path: './config/config.env' });
 connectDB();
@@ -26,6 +28,7 @@ if (process.env.NODE_ENV === 'development') {
 app.use('/api/v1/apes', apes);
 app.use('/api/v1/fpsentiment', financialprepSentiment);
 app.use('/api/v1/portfolio', portfolio);
+app.use('/api/v1/income', income);
 
 const PORT = process.env.PORT || 5000;
 

@@ -12,11 +12,16 @@ POST http://localhost:5000/api/v1/apes/3
 ### GET Financialprep Sentiment 
 GET http://localhost:5000/api/v1/fpsentiment/F
 
+### GET RSI
+GET http://localhost:5000/api/v1/income
 
 ### POST Portfolio 
 POST http://localhost:5000/api/v1/portfolio
 Content-Type: application/json
 
 {
-    "ticker":"SNOW"
+    "ticker":"CTRX"
 }
+
+### GET 
+GET http://localhost:5000/api/v1/portfolio
